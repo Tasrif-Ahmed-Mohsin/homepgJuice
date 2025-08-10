@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Journal - Mindful Reading</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A mindful journal featuring thoughtful perspectives on minimalist living, digital wellness, and conscious lifestyle choices.">
+</head>
+<body>
+    <!-- Main Page -->
+    <div id="main-page" class="page">
+        <!-- Hero Section at the top of the page -->
+        <section class="hero">
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1 class="hero__title">Elegant Journal</h1>
+                <p class="hero__subtitle">Thoughtful perspectives on mindful living</p>
+                <p class="hero__description">Explore perspectives on minimalism, digital wellness, sustainable living, and mindful practices that can transform your daily experience.</p>
+                <button class="btn btn--hero" id="explore-articles">Explore Articles</button>
+            </div>
+        </section>
+        
+        <main class="main-content">
+            <div class="container">
+                <div class="articles-grid" id="articles-grid">
+                    <!-- Articles will be dynamically inserted here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Article Page -->
+    <div id="article-page" class="page hidden">
+        <header class="header">
+            <div class="container">
+                <button class="btn btn--outline back-home-btn" id="back-home-btn" aria-label="Return to main page">
+                    ← Back to Home
+                </button>
+                <h1 class="journal-title">Elegant Journal</h1>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="container">
+                <article class="article-full" id="article-full">
+                    <!-- Article content will be dynamically inserted here -->
+                </article>
+                
+                <nav class="article-navigation" aria-label="Article navigation">
+                    <button class="btn btn--secondary" id="prev-article-btn" aria-label="Go to previous article">← Previous Article</button>
+                    <button class="btn btn--secondary" id="next-article-btn" aria-label="Go to next article">Next Article →</button>
+                </nav>
+                
+                <section class="comments-section">
+                    <h3>Share Your Thoughts</h3>
+                    
+                    <form class="comment-form" id="comment-form" novalidate>
+                        <div class="form-group">
+                            <label for="comment-name" class="form-label">Your Name *</label>
+                            <input 
+                                type="text" 
+                                id="comment-name" 
+                                class="form-control" 
+                                required 
+                                aria-describedby="name-help"
+                                placeholder="Enter your name"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comment-email" class="form-label">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="comment-email" 
+                                class="form-control" 
+                                required 
+                                aria-describedby="email-help"
+                                placeholder="your.email@example.com"
+                            >
+                            <small id="email-help" class="form-text">Your email will not be displayed publicly</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comment-text" class="form-label">Your Comment *</label>
+                            <textarea 
+                                id="comment-text" 
+                                class="form-control" 
+                                rows="5" 
+                                required 
+                                aria-describedby="comment-help"
+                                placeholder="Share your thoughts on this article..."
+                            ></textarea>
+                            <small id="comment-help" class="form-text">Minimum 10 characters</small>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary">Post Comment</button>
+                    </form>
+                    
+                    <div class="comments-list" id="comments-list" role="region" aria-label="Comments">
+                        <!-- Comments will be dynamically inserted here -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
